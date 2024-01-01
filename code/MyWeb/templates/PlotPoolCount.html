@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>股票趋势统计</title>
+		<style>
+			.box1 {
+				width: 1080px;
+				height: 300px;
+				background-color: white;
+				}
+				
+			.box2 {
+				width: 1080px;
+				height: 300px;
+				background-color: white;
+				}
+			
+			.box3 {
+				width: 1080px;
+				height: 300px;
+				background-color: white;
+				}
+			
+			.box4 {
+				width: 1080px;
+				height: 300px;
+				background-color: white;
+				}
+			
+			.box5 {
+				width: 1080px;
+				height: 300px;
+				background-color: white;
+				}
+				
+		</style>
+		<script src="../static/js/echarts.common.min.js"></script>
+	</head>
+	
+	<body>
+	
+	<br>
+	<br>
+	<br>
+	<div class="box1">chart Up Down</div>
+	
+	<script>
+		var chartUpDown = echarts.init(document.querySelector('.box1'));
+		var option = {
+				  title: {
+					text: '股票涨跌统计'
+				  },
+				  tooltip: {trigger: 'axis'},
+				  legend: {data: ['Up', 'Down']},
+				  grid: {left: '3%', right: '4%', bottom: '5%', containLabel: true},
+
+				  xAxis: {
+						type: 'category',
+						boundaryGap: false,
+						data: ['03Apr', '04Apr', '05Apr', '03Apr', '06Apr', '07Apr', '08Apr']
+				  },
+				  yAxis: {type: 'value'},
+				  series: [
+					{name: 'Up',
+					type: 'line',
+					stack: 'Total',
+					data: [120, 132, 101, 134, 90, 230, 210]},
+					
+					{name: 'Down',
+					type: 'line',
+					stack: 'Total',
+					data: [220, 182, 191, 234, 290, 330, 310]},]
+				};
+		chartUpDown.setOption(option);
+	
+	</script>
+	
+	<br>
+	<br>
+	<br>
+	<div class="box2">chart Re Up Down</div>
+	<script>
+		var chartReUpDown = echarts.init(document.querySelector('.box2'));
+		var option = {
+				  title: {
+					text: '股票涨跌与反转统计'
+				  },
+				  tooltip: {
+					trigger: 'axis'
+				  },
+				  legend: {
+					data: ['Up', 'Re-up', 'Down', 'Re-down']
+				  },
+				  grid: {
+					left: '3%',
+					right: '4%',
+					bottom: '3%',
+					containLabel: true
+				  },
+				  toolbox: {
+					feature: {
+					  saveAsImage: {}
+					}
+				  },
+				  xAxis: {
+					type: 'category',
+					boundaryGap: false,
+					data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+				  },
+				  yAxis: {
+					type: 'value'
+				  },
+				  series: [
+					{
+					  name: 'Up',
+					  type: 'line',
+					  stack: 'Total',
+					  data: [120, 132, 101, 134, 90, 230, 210]
+					},
+					{
+					  name: 'Re-up',
+					  type: 'line',
+					  stack: 'Total',
+					  data: [220, 182, 191, 234, 290, 330, 310]
+					},
+					{
+					  name: 'Down',
+					  type: 'line',
+					  stack: 'Total',
+					  data: [150, 232, 201, 154, 190, 330, 410]
+					},
+					{
+					  name: 'Re-down',
+					  type: 'line',
+					  stack: 'Total',
+					  data: [320, 332, 301, 334, 390, 330, 320]
+					},
+				  ]
+				};
+		chartReUpDown.setOption(option);
+	</script>
+	
+	<br>
+	<br>
+	<br>
+	<div class="box3"></div>
+	<script>
+		var chartTrendsCount = echarts.init(document.querySelector('.box3'));
+		var option = {
+				  title: {
+					text: '股票趋势阶段统计'
+				  },
+				  tooltip: {
+					trigger: 'axis'
+				  },
+				  legend: {
+					data: ['-Up', 'Up-', '-Down', 'Down-']
+				  },
+				  grid: {
+					left: '3%',
+					right: '4%',
+					bottom: '3%',
+					containLabel: true
+				  },
+				  toolbox: {
+					feature: {
+					  saveAsImage: {}
+					}
+				  },
+				  xAxis: {
+					type: 'category',
+					boundaryGap: false,
+					data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+				  },
+				  yAxis: {
+					type: 'value'
+				  },
+				  series: [
+					{
+					  name: '-Up',
+					  type: 'line',
+					  stack: 'Total',
+					  data: [120, 132, 101, 134, 90, 230, 210]
+					},
+					{
+					  name: 'Up-',
+					  type: 'line',
+					  stack: 'Total',
+					  data: [220, 182, 191, 234, 290, 330, 310]
+					},
+					{
+					  name: '-Down',
+					  type: 'line',
+					  stack: 'Total',
+					  data: [150, 232, 201, 154, 190, 330, 410]
+					},
+					{
+					  name: 'Down-',
+					  type: 'line',
+					  stack: 'Total',
+					  data: [320, 332, 301, 334, 390, 330, 320]
+					},
+					
+				  ]
+				};
+		chartTrendsCount.setOption(option);
+	</script>
+	
+	<br>
+	<br>
+	<br>
+	<div class="box4"></div>
+	<script>
+		var chartScoreCount = echarts.init(document.querySelector('.box4'));
+		var option = {
+				  title: {
+					text: '股票趋势得分统计'
+				  },
+				  tooltip: {
+					trigger: 'axis'
+				  },
+				  legend: {
+					data: ['Up-01', 'Up-02', 'Up-03', 'Down-01', 'Down-02', 'Down-03']
+				  },
+				  grid: {
+					left: '3%',
+					right: '4%',
+					bottom: '3%',
+					containLabel: true
+				  },
+				  toolbox: {
+					feature: {
+					  saveAsImage: {}
+					}
+				  },
+				  xAxis: {
+					type: 'category',
+					boundaryGap: false,
+					data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+				  },
+				  yAxis: {
+					type: 'value'
+				  },
+				  series: [
+					{
+					  name: 'Up-01',
+					  type: 'line',
+					  stack: 'Total',
+					  data: [120, 132, 101, 134, 90, 230, 210]
+					},
+					{
+					  name: 'Up-02',
+					  type: 'line',
+					  stack: 'Total',
+					  data: [220, 182, 191, 234, 290, 330, 310]
+					},
+					{
+					  name: 'Up-03',
+					  type: 'line',
+					  stack: 'Total',
+					  data: [150, 232, 201, 154, 190, 330, 410]
+					},
+					{
+					  name: 'Down-01',
+					  type: 'line',
+					  stack: 'Total',
+					  data: [320, 332, 301, 334, 390, 330, 320]
+					},
+					{
+					  name: 'Down-02',
+					  type: 'line',
+					  stack: 'Total',
+					  data: [820, 932, 901, 934, 1290, 1330, 1320]
+					},
+					
+					{
+					  name: 'Down-03',
+					  type: 'line',
+					  stack: 'Total',
+					  data: [822, 935, 941, 944, 1220, 1320, 1310]
+					},
+				  ]
+				};
+		chartScoreCount.setOption(option);
+	</script>
+	
+	<br>
+	<br>
+	<br>
+	<div class="box5"></div>
+	<script>
+		var chartBoardUpDown = echarts.init(document.querySelector('.box5'));
+		var option = {
+				  title: {
+					text: '板块趋势统计'
+				  },
+				  tooltip: {
+					trigger: 'axis'
+				  },
+				  legend: {
+					data: ['Board _Up', 'Board Up_', 'Board _Down', 'Board Down_']
+				  },
+				  grid: {
+					left: '3%',
+					right: '4%',
+					bottom: '3%',
+					containLabel: true
+				  },
+				  toolbox: {
+					feature: {
+					  saveAsImage: {}
+					}
+				  },
+				  xAxis: {
+					type: 'category',
+					boundaryGap: false,
+					data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+				  },
+				  yAxis: {
+					type: 'value'
+				  },
+				  series: [
+					{
+					  name: 'Board _Up',
+					  type: 'line',
+					  stack: 'Total',
+					  data: [120, 132, 101, 134, 90, 230, 210]
+					},
+					{
+					  name: 'Board Up_',
+					  type: 'line',
+					  stack: 'Total',
+					  data: [220, 182, 191, 234, 290, 330, 310]
+					},
+					{
+					  name: 'Board _Down',
+					  type: 'line',
+					  stack: 'Total',
+					  data: [150, 232, 201, 154, 190, 330, 410]
+					},
+					{
+					  name: 'Board Down_',
+					  type: 'line',
+					  stack: 'Total',
+					  data: [320, 332, 301, 334, 390, 330, 320]
+					},
+				  ]
+				};
+		chartBoardUpDown.setOption(option);
+	</script>
+	
+	</body>
+</html>

@@ -1,0 +1,15 @@
+*.txt
+data/
+__pycache__/
+.ipynb_checkpoints/
+.csv
+.xls
+pre/
+img/
+.jpg
+.pdf
+.png
+.idea/
+UI/
+share/
+UI/

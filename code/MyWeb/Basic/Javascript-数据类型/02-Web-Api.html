@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="jquery-3.6.0.js">
+			
+		</script>
+	</head>
+	<body>
+	</body>
+	
+	<script type="text/javascript">
+		
+		function sum(x, y){
+			if (isNaN(x)||isNaN(y)){
+				alert("Not Number sum Number")}
+			
+			else{
+				alert(x + y)}
+		}
+
+	</script>
+	<input type="button" value="sum1" onclick="sum(true, 100)"/>
+	<input type="button" value="sum2" onclick="sum('China', 100)"/>
+	<!-- <input type="button" value="sum3"  onclick="sum(202, 100)"/> -->
+	
+	<script type="text/javascript">
+		
+		var username = 0
+		
+		if (Boolean(username)){
+			console.log("Welcome" + username)}
+		
+		else{
+			console.log('No name')}
+			
+		var s1 = "abcccd";
+		
+		console.log(typeof s1);
+		
+		var s2 = String("hello");
+		var s3 = 'ht=tp:=//127.0.0.1=8848/Java=script/02-Web-Api.html';
+		s4 = s3.replace("=", " ");
+		
+		function Employee(empNo, empName, empSaray, empDate){
+			this.empNo =  empNo;
+			this.empName = empName;
+			this.empSaray = empSaray;
+			this.empDate = empDate;
+			this.work = function(){
+				console.log(this.empName + "is working!")}
+				
+			this.saray = function(){
+				console.log(this.empName + this.empSaray + " is paid")
+				}
+		}
+
+				
+			
+			
+		
+		
+		var e1 = new Employee(1121, "ZhangSan", 8000, "2022-01-01");
+		e1.work();
+		e1.saray();
+		
+	</script>
+	
+</html>

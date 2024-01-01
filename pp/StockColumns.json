@@ -1,0 +1,24 @@
+{"Basic": {"1": "date", "2": "open", "3": "close", "4": "high", "5": "low", "6": "volume", "7": "money"},
+
+  "Macd": {"1": "EmaShort", "2": "EmaMid", "3": "EmaLong", "4": "Dif",
+    "5": "DifSm", "6": "DifMl", "7": "Dea", "8": "MACD"},
+
+  "Boll": {"1": "BollMid", "2": "BollStd", "3": "BollUp", "4": "BollDn", "5": "StopLoss"},
+
+  "Signal": {"1": "Signal", "2": "SignalTimes", "3": "SignalChoice", "4": "SignalStartTime",
+              "5": "up", "6": "dn", "7": 1, "8": -1},
+
+  "cycle": {"1": "EndPrice", "2": "EndPriceIndex", "3": "StartPrice", "4": "StartPriceIndex",
+    "5": "Cycle1mVolMax1", "6": "Cycle1mVolMax5", "7": "Bar1mVolMax1", "8": "Bar1mVolMax5",
+    "9": "CycleLengthMax", "10": "CycleLengthPerBar", "11": "CycleAmplitudePerBar",
+    "12": "CycleAmplitudeMax"},
+
+    "Recycle": {"1": "preCycle1mVolMax1", "2": "preCycle1mVolMax5",
+                "3": "preCycleAmplitudeMax", "4": "preCycleLengthMax",
+                "5": "nextCycleLengthMax", "6": "nextCycleAmplitudeMax"},
+
+  "Signal30m": {"1": "30mSignal", "2": "30mSignalChoice", "3": "30mSignalTimes"},
+  "Signal120m": {"1": "120mSignal", "2": "120mSignalChoice", "3": "120mSignalTimes"},
+  "SignalDaily": {"1": "Daily1mVolMax1", "2": "Daily1mVolMax5",
+                  "3": "Daily1mVolMax15", "4": "DailyVolEmaParser",
+                  "5": "DailyVolEma"}}
