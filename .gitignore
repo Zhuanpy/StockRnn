@@ -13,3 +13,5 @@ img/
 UI/
 share/
 UI/
+.ipynb
+echarts-python-0.1.3/
